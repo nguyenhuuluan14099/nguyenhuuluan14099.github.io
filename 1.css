@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.khoi {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+
+.khoi div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    
+    font-size: 58px;
+    text-align: center;
+    line-height: 306%;
+    border: 1px solid black;
+}
+
+.to {
+    width: 200px;
+    height: 200px;
+    perspective: 500px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+._1{
+    transform: translateZ(100px);
+    background-color: rgba(23, 216, 142, 0.308);
+}
+._2{
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: rgba(255, 255, 0, 0.308);
+}
+._3{
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: rgba(0, 0, 255, 0.349);
+}
+._4{
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: rgba(216, 100, 32, 0.349);
+}
+._5{
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: rgba(0, 255, 255, 0.342);
+}
+._6{
+    transform: rotateY(180deg) translateZ(100px);
+    background-color: rgba(127, 255, 212, 0.377);
+}
+.button{
+    margin-left: 450px;
+}
+.khoi.so0{
+    transform: translateZ(0px);
+    transition: 0.4s;
+    animation: movea 1s forwards;
+}
+@keyframes movea{
+    from{transform: rotateY(180deg);}
+    to{transform: rotateY(0deg);}
+}
+.khoi.so1{
+    transition: 0.4s;
+    animation: move1 1s forwards;
+}
+@keyframes move1{
+    from{transform:translateX(0px)}
+    to{transform: rotateY(90deg);}
+}
+.khoi.so2{
+    transition: 0.4s;
+    animation: move2 1s forwards;
+}
+@keyframes move2{
+    from{transform:rotateY(90deg);}
+    to{transform: rotateY(-90deg);}
+}
+.khoi.so3{
+    transition: 0.4s;
+    animation: move3 1s forwards;
+}
+@keyframes move3{
+    from{transform:rotateY(-90deg);}
+    to{transform: rotateX(-90deg);}
+}
+.khoi.so4{
+    transition: 0.4s;
+    animation: move4 1s forwards;
+}
+@keyframes move4{
+    from{transform:rotateX(-90deg);}
+    to{transform: rotateX(90deg);}
+}
+.khoi.so5{
+    transition: 0.4s;
+    animation: move5 1s forwards;
+}
+@keyframes move5{
+    from{transform:translateZ(0px);}
+    to{transform: rotateY(180deg);}
+}
